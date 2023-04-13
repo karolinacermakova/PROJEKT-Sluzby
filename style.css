@@ -1,3 +1,260 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #8B8B8B;
+    background-color: #FAFAFA;
+    margin: 0;
+}
+
+h1,
+h2 {
+    color: black;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #407BFF;
+    margin: 10px auto 10px auto;
+
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+.web {
+    margin: 60px 20px;
+}
+
+.traveler-image {
+    width: 100%;
+    max-width: 350px;
+}
+
+.traveler-image-section {
+    text-align: center;
+}
+
+section {
+    margin: 60px 0;
+}
+
+.button {
+    padding: 11px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 11px 30px;
+}
+
+.button-adventure {
+    background-color: #407BFF;
+    color: #FFFFFF;
+}
+
+.button-adventure:hover {
+    background-color: #155df8;
+    color: #FFFFFF;
+}
+
+.button-relax {
+    background-color: #8B8B8B;
+    color: #FFFFFF;
+}
+
+.button-relax:hover {
+    background-color: #6e6e6e;
+    color: #FFFFFF;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.buttons .button {
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 13px;
+    color: #8B8B8B;
+    text-align: left;
+}
+
+.boxes {
+    margin-top: 30px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 6px #407BFF1F;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    flex: 0 0 50px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.icon img {
+    width: auto;
+    height: 40px;
+}
+
+
+/******************************/
+/* 640 A VÍCE*/
+
+@media screen and (min-width : 640px) {
+
+    .traveler-image {
+        max-width: 400px;
+    }
+
+    section {
+        margin: 80px 0;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .buttons .button {
+        margin-right: 20px;
+    }
+
+    .boxes {
+        display: flex;
+    }
+
+    .box {
+        flex: 0 0 calc((100% - 40px) / 3);
+        display: block;
+        padding: 30px 20px;
+        margin-right: 20px;
+    }
+
+    .box p {
+        font-size: 13px;
+        color: #8B8B8B;
+        text-align: center;
+    }
+
+    .icon {
+        margin-right: auto;
+    }
+
+    .boxes {
+        margin-top: 40px;
+    }
+
+}
+
+
+/******************************/
+/* 1100 A VÍCE*/
+
+@media screen and (min-width : 1100px) {
+
+    h1,
+    h2,
+    p {
+        text-align: left;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    h1::after {
+        margin-left: 0;
+    }
+
+    .web {
+        max-width: 1040px;
+        margin: 60px auto;
+    }
+
+    .traveler-text-section {
+        order: 1;
+    }
+
+    .traveler-image-section {
+        order: 2;
+    }
+
+    .traveler-image {
+        max-width: 450px;
+    }
+
+    
+    .traveler {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .traveler-image-section,
+    .traveler-text-section {
+        flex: 0 0 calc((100% - 60px) / 2);
+    }
+
+    .buttons {
+        justify-content: start;
+    }
+
+    .services {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .boxes {
+        flex: 0 0 550px;
+        margin-top: 0;
+    }
+
+    .services-text-section {
+        flex: 0 0 430px;
+    }
+
+    .office .services-text-section {
+        order: 2;
+    }
+
+    .office .boxes {
+        order: 1;
+    }
+
+}
